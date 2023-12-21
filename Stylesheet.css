@@ -1,0 +1,146 @@
+/* https://xd.adobe.com/view/a8a30fd2-503a-4e8d-949f-7815efb8b2cf-fdf0/specs/  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 40px;
+  width: 200px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  margin: 0;
+  z-index: 1000;
+}
+
+header img {
+  height: auto;
+  max-height: 100%;
+  /* Das Bild bleibt innerhalb der Höhe des Headers */
+  width: auto;
+  max-width: 100%;
+  /* Das Bild bleibt innerhalb der Breite des Headers */
+}
+
+
+
+/*Schrift*/
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-left: auto;
+
+}
+
+
+
+
+.Produktvorstellung-container {
+  position: relative;
+  display: flex;
+  max-width: 1200px; /* Füge eine maximale Breite hinzu, um den Inhalt zu begrenzen */
+  margin: 0 auto; /* Zentriere den Container horizontal */
+}
+
+#Hintergrundbild1 {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Bild nach rechts verschieben */
+  align-items: center; /* Vertikal zentrieren */
+}
+
+#Hintergrundbild1 img {
+  max-width: 100%; /* Damit das Bild nicht über den Container hinaus geht */
+}
+
+.Produktvorstellung-Text {
+  flex: 1;
+  padding: 0px;
+  right: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Text vertikal zentrieren */
+  text-align: left; /* Text links ausrichten */
+}
+.Produktvorstellung button {
+  background-color: #000000;
+  border: none;
+  margin: 20px 20px 150px;
+  padding: 15px 80px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.Produktvorstellung button:hover {
+  background-color: #5E2028;
+  color: white;
+}
+
+
+.footer-bottom{
+  height: 24.8vh;
+  background-color: #5E2028;
+  position: relative;
+  margin: 75px 0 0;
+  padding: 0;
+}
+
+.footer-Markenname{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.footer-navigation {
+  margin: 0;
+  padding: 0;  
+}
+
+.footer-navigation-item {
+  padding-top: 24px;
+}
+
+.footer-navigation-item {
+  color: white; /* Farbe für Links */
+  text-decoration: none; /* Entfernt standardmäßige Link-Unterstreichungen */
+}
+
+.footer-navigation-item:hover {
+  color: rgb(0, 0, 0); /* Hintergrundfarbe bei Hover */
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  header {
+    width: 25%; /* Der Header erstreckt sich über die volle Breite des Bildschirms */
+  }
+
+  header img {
+    content: url('/Responsive/Logo+Icon/W-Logo.png'); /* Pfad zu deinem neuen Bild */
+    max-width: 1000px; /* Beispiel: Reduziere die maximale Breite des neuen Bildes auf 70px */
+  }
+}
